@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/elvc/postgresql#readme",
   "dependencies": {
+    "knex": "^0.12.9",
     "pg": "^6.1.5"
   }
 }
