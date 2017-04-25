@@ -17,7 +17,7 @@ function getFamousPerson(name) {
     return console.error ('Invalid parameters. Please include a name for search.');
   }
 
-  client.query("SELECT * FROM famous_people WHERE last_name = $1 OR first_name = $1", [name], (err, result) => {
+  client.query("SELECT * FROM famous_people WHERE LOWER(last_name) = $1 OR LOWER(first_name) = $1", [name.toLowerCase()], (err, result) => {
     if (err) {
       return console.error("error running query", err);
     }
